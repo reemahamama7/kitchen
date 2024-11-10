@@ -1,0 +1,111 @@
+/* Basic navbar styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: white;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Hamburger button styling */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Navbar menu styling for mobile */
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-menu.active {
+    display: block;
+    transform: translateY(0);
+    z-index: 10;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    margin-inline-start: 6%;
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 1rem 0;
+  }
+  
+  /* Reservation button */
+  .reservation-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 992px) {
+    .hamburger {
+      display: none;
+    }
+    .navbar-menu {
+      display: flex;
+      position: static;
+      transform: none;
+    }
+    .navbar-nav {
+      display: flex;
+      gap: 1rem;
+      
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      margin-inline-start: auto;
+  }
+
+
+
+    .navbar-nav .nav-item {
+      padding: 0;
+    }
+  }
+  
